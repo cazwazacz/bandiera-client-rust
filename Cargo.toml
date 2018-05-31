@@ -1,0 +1,6 @@
+[package]
+name = "bandiera-client-rust"
+version = "0.1.0"
+authors = ["wazacza <cazwazacz@gmail.com>"]
+
+[dependencies]
