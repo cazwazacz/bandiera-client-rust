@@ -1,6 +1,8 @@
 [package]
-name = "bandiera-client-rust"
+name = "bandiera_client"
 version = "0.1.0"
 authors = ["wazacza <cazwazacz@gmail.com>"]
 
 [dependencies]
+reqwest = "0.8.3"
+serde_json = "1.0"
