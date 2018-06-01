@@ -9,7 +9,7 @@ fn main() {
 
     println!("{}", response);
 
-    if client.get_feature("group-one", "search-bar") == true {
+    if client.get_feature("group-one", "another-feature") {
         println!("hello");
     } else {
         println!("bye bye");
