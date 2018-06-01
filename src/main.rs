@@ -8,4 +8,10 @@ fn main() {
     let response = client.get_all();
 
     println!("{}", response);
+
+    if client.get_feature("group-one", "search-bar") == true {
+        println!("hello");
+    } else {
+        println!("bye bye");
+    }
 }
