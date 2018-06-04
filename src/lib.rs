@@ -29,6 +29,14 @@ impl Client {
         response.unwrap()
     }
 
+    pub fn get_features_for_group(&mut self, group: &str) -> serde_json::Value {
+        let endpoint = format!("/api/v2/groups/{}/features", group);
+
+        let full_url = format!("{}{}", &mut self.base_url, endpoint);
+
+        Client::make_request(&*full_url)
+    }
+
     fn make_request(url: &str) -> serde_json::Value {
         let json: serde_json::Value = match reqwest::get(url) {
             Ok(mut response) => {

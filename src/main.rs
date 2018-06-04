@@ -5,9 +5,13 @@ fn main() {
 
     let mut client = bandiera_client::create_client(base_url);
 
-    let response = client.get_all();
+    let all = client.get_all();
 
-    println!("{}", response);
+    println!("{}", all);
+
+    let features_for_group = client.get_features_for_group("group-one");
+
+    println!("{}", features_for_group);
 
     if client.get_feature("group-one", "another-feature") {
         println!("hello");
